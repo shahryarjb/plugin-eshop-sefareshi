@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install version="1.0" type="eshopplugin" group="shipping" >
+	<name>eshop_postcost_sefareshi</name>
+	<title>Persian Post Cost - Sefareshi</title>
+        <author>mojtaba naserei</author>
+        <creationDate>Jan 2016</creationDate>
+        <copyright>seocommunity.ir</copyright>
+        <license>http://www.gnu.org/licenses/gpl-3.0.en.html</license>
+        <authorEmail>mojtaba.naserei@yahoo.com</authorEmail>
+        <authorUrl>http://www.seocommunity.ir</authorUrl>
+        <version>1.0.0</version>
+	<description>This is Persian Price Shipping method for Eshop</description>
+	<config>
+		<fields name="params" addfieldpath="/administrator/components/com_eshop/elements/">
+			<fieldset name="basic">
+				<codearea></codearea>
+					<field name="OC" type="list" default="" label="" description="">
+  <option value="0"> دیگر هزینه ها (به ریال)</option>
+</field>
+				<field name="Sefareshi_bime" type="text" label="بیمه" description="هزینه بیمه برای پست سفارشی" size="5" default="0"></field>
+				<field name="Sefareshi_shenase" type="text" label="شناسه الکترونیکی" description="هزینه شناسه الکترونیکی" size="5" default="0"></field>
+				<field name="Sefareshi_agahi" type="text" label="آگهی تحویل" description="هزینه آگهی تحویل جهت اطمینان از تحویل محصول به مشتری" size="5" default="0"></field>
+				<field name="Sefareshi_bk" type="text" label="بسته بندی و موارد دیگر" description="هزینه بسته بندی و کارتن و .." size="5" default="0"></field>
+				<field name="Sefareshi_tax" type="text" label="مالیات" description="مالیات بر ارزش افزوده به درصد" size="5" default="0"></field>
+		    	<field name="BS" type="list" default="" label="" description="">
+  <option value="0">هزینه پست برای داخل استان (به ریال)</option>
+</field>
+				<field name="Sefareshi_250_BS" type="text" label="حداکثر ۲۵۰ گرم" description="از وزن ۰ تا ۲۵۰ گرم" size="5" default="0"></field>
+				<field name="Sefareshi_500_BS" type="text" label="حداکثر ۵۰۰ گرم" description="از وزن ۲۵۱ گرم تا ۵۰۰ گرم" size="5" default="0"></field>
+				<field name="Sefareshi_1000_BS" type="text" label="حداکثر ۱۰۰۰ گرم" description="از وزن ۵۰۱ گرم تا ۱۰۰۰ گرم" size="5" default="0"></field>
+				<field name="Sefareshi_2000_BS" type="text" label="حداکثر ۲۰۰۰ گرم" description="از وزن ۱۰۰۱ گرم تا ۲۰۰۰ گرم" size="5" default="0"></field>
+				<field name="SPlus_BS" type="text" label="بیشتر از ۲ کیلو" description="وزن محصولاتی که بیشتر از ۲ کیلو گرم دارند" size="5" default="0"></field>
+				<field name="OS" type="list" default="" label="" description="" >
+  <option value="0">هزینه پست برای استان های همجوار (به ریال)</option>
+</field>
+				<field name="Sefareshi_250_OS" type="text" label="حداکثر ۲۵۰ گرم" description="از وزن ۰ تا ۲۵۰ گرم" size="5" default="0"></field>
+				<field name="Sefareshi_500_OS" type="text" label="حداکثر ۵۰۰ گرم" description="از وزن ۲۵۱ گرم تا ۵۰۰ گرم" size="5" default="0"></field>
+				<field name="Sefareshi_1000_OS" type="text" label="حداکثر ۱۰۰۰ گرم" description="از وزن ۵۰۱ گرم تا ۱۰۰۰ گرم" size="5" default="0"></field>
+				<field name="Sefareshi_2000_OS" type="text" label="حداکثر ۲۰۰۰ گرم" description="از وزن ۱۰۰۱ گرم تا ۲۰۰۰ گرم" size="5" default="0"></field>
+				<field name="SPlus_OS" type="text" label="بیشتر از ۲ کیلو" description="وزن محصولاتی که بیشتر از ۲ کیلو گرم دارند" size="5" default="0"></field>
+				<field name="OGH" type="list" default="" label="" description="" >
+  <option value="0">هزینه پست برای استان های غیر همجوار (به ریال)</option>
+</field>
+				<field name="Sefareshi_250_OGH" type="text" label="حداکثر ۲۵۰ گرم" description="از وزن ۰ تا ۲۵۰ گرم" size="5" default="0"></field>
+				<field name="Sefareshi_500_OGH" type="text" label="حداکثر ۵۰۰ گرم" description="از وزن ۲۵۱ گرم تا ۵۰۰ گرم" size="5" default="0"></field>
+				<field name="Sefareshi_1000_OGH" type="text" label="حداکثر ۱۰۰۰ گرم" description="از وزن ۵۰۱ گرم تا ۱۰۰۰ گرم" size="5" default="0"></field>
+				<field name="Sefareshi_2000_OGH" type="text" label="حداکثر ۲۰۰۰ گرم" description="از وزن ۱۰۰۱ گرم تا ۲۰۰۰ گرم" size="5" default="0"></field>
+				<field name="SPlus_OGH" type="text" label="بیشتر از ۲ کیلو" description="وزن محصولاتی که بیشتر از ۲ کیلو گرم دارند" size="5" default="0"></field>
+				
+			</fieldset>
+		</fields>
+	</config>
+	<files>
+		<filename>eshop_postcost_func.php</filename>
+                <filename>eshop_postcost_totalpost_func.php</filename>
+		<filename>eshop_postcost_sefareshi.php</filename>
+	
+	</files>
+	<languages>
+		<language tag="fa-IR">language/fa-IR.plg_eshop_postcost_sefareshi.ini</language>
+		<language tag="en-GB">language/en-GB.plg_eshop_postcost_sefareshi.ini</language>
+	</languages>
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">SQL/install.sql</file>
+		</sql>
+	</install>
+	<installfile />
+</install>
+
+
+
